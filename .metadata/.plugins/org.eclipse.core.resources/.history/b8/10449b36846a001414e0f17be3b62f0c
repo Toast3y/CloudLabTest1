@@ -20,7 +20,7 @@
         <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
       </tr>
       <tr>
-        <td><a href="cloudlabtest1?A=0&B=0&C=0&D=0">CloudLabTest1</a></td>
+        <td><a href="cloudlabtest1">CloudLabTest1</a></td>
       </tr>
     </table>
   </body>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>CloudLabTest1</servlet-name>
+		<servlet-class>ie.dit.jerrarddunne.christopher.CloudLabTest1Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CloudLabTest1</servlet-name>
+		<url-pattern>/cloudlabtest1</url-pattern>
+	</servlet-mapping>
+	<context-param>
+	    <description>var-a</description>
+	    <param-name>A</param-name>
+	    <param-value>0</param-value>
+	</context-param>
+	<context-param>
+	    <description>var-b</description>
+	    <param-name>B</param-name>
+	    <param-value>0</param-value>
+	</context-param>
+	<context-param>
+	    <description>var-c</description>
+	    <param-name>C</param-name>
+	    <param-value>0</param-value>
+	</context-param>
+	<context-param>
+	    <description>var-d</description>
+	    <param-name>D</param-name>
+	    <param-value>0</param-value>
+	</context-param>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
