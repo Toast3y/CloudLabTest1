@@ -330,3 +330,47 @@ java.lang.NullPointerException
 
 !ENTRY com.android.ide.eclipse.adt 2 0 2014-11-12 16:06:25.214
 !MESSAGE No projects found for [C:\Users\Chris Dunne\Documents\GitHub\CloudLabTest1\CloudLabTest1\war\WEB-INF\web.xml]
+
+!ENTRY com.google.appengine.eclipse.core 4 0 2014-11-12 16:18:26.198
+!MESSAGE Unable to update app: Error posting to URL: https://appengine.google.com/api/appversion/getresourcelimits?app_id=CloudLabTest1&version=1&
+400 Bad Request
+Client Error (400)The request is invalid for an unspecified reason.
+
+
+See the deployment console for more details
+!STACK 0
+com.google.appengine.tools.admin.AdminException: Unable to update app: Error posting to URL: https://appengine.google.com/api/appversion/getresourcelimits?app_id=CloudLabTest1&version=1&
+400 Bad Request
+Client Error (400)The request is invalid for an unspecified reason.
+
+	at com.google.appengine.tools.admin.AppAdminImpl.doUpdate(AppAdminImpl.java:480)
+	at com.google.appengine.tools.admin.AppAdminImpl.update(AppAdminImpl.java:55)
+	at com.google.appengine.eclipse.core.proxy.AppEngineBridgeImpl.deploy(AppEngineBridgeImpl.java:433)
+	at com.google.appengine.eclipse.core.deploy.DeployProjectJob.runInWorkspace(DeployProjectJob.java:158)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: com.google.appengine.tools.admin.HttpIoException: Error posting to URL: https://appengine.google.com/api/appversion/getresourcelimits?app_id=CloudLabTest1&version=1&
+400 Bad Request
+Client Error (400)The request is invalid for an unspecified reason.
+
+	at com.google.appengine.tools.admin.AbstractServerConnection.send1(AbstractServerConnection.java:336)
+	at com.google.appengine.tools.admin.AbstractServerConnection.send(AbstractServerConnection.java:287)
+	at com.google.appengine.tools.admin.AbstractServerConnection.post(AbstractServerConnection.java:266)
+	at com.google.appengine.tools.admin.LoggingClientDeploySender.send(LoggingClientDeploySender.java:47)
+	at com.google.appengine.tools.admin.ResourceLimits.remoteRequest(ResourceLimits.java:173)
+	at com.google.appengine.tools.admin.ResourceLimits.request(ResourceLimits.java:139)
+	at com.google.appengine.tools.admin.AppAdminImpl.doUpdate(AppAdminImpl.java:468)
+	... 5 more
+
+!ENTRY com.google.appengine.eclipse.core 1 0 2014-11-12 16:20:36.925
+!MESSAGE CloudLabTest1 successfully deployed to Google App Engine
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-12 16:20:37.437
+!MESSAGE Sending POST request to Analytics: {cd7=NOT_USED, cd5=true, cd6=GAE 1.9.13, cd3=3.9.0.v20140514-1307, cd4=com.google.gdt.eclipse.suite.e44.feature_3.7.0.v201407290036-rel-r44, cd1=org.eclipse.epp.package.standard.product, cd2=FFC58FC0DC79F57EF8A5B6523782EE2E0026C0D5, ea=DEPLOY_GAE, cid=1411572643367, cd9=false, ec=com.google.gdt.eclipse.core, v=1, t=event, el=id=1411572643367&ev=3.9.0.v20140514-1307&v=com.google.gdt.eclipse.suite.e44.feature_3.7.0.v201407290036-rel-r44&gaev=1.9.13&p=org.eclipse.epp.package.standard.product&action=gae_backend_deploy&appIdHash=FFC58FC0DC79F57EF8A5B6523782EE2E0026C0D5&isGoogleCloudSqlUsed=false&isSignedIn=true, cd10=1411572643367, an=Google Plugin for Eclipse, tid=UA-43239122-1}
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-12 16:20:37.438
+!MESSAGE Analytics ping request parameters: cd7=NOT_USED&cd5=true&cd6=GAE%201.9.13&cd3=3.9.0.v20140514-1307&cd4=com.google.gdt.eclipse.suite.e44.feature_3.7.0.v201407290036-rel-r44&cd1=org.eclipse.epp.package.standard.product&cd2=FFC58FC0DC79F57EF8A5B6523782EE2E0026C0D5&ea=DEPLOY_GAE&cid=1411572643367&cd9=false&ec=com.google.gdt.eclipse.core&v=1&t=event&el=id%3D1411572643367%26ev%3D3.9.0.v20140514-1307%26v%3Dcom.google.gdt.eclipse.suite.e44.feature_3.7.0.v201407290036-rel-r44%26gaev%3D1.9.13%26p%3Dorg.eclipse.epp.package.standard.product%26action%3Dgae_backend_deploy%26appIdHash%3DFFC58FC0DC79F57EF8A5B6523782EE2E0026C0D5%26isGoogleCloudSqlUsed%3Dfalse%26isSignedIn%3Dtrue&cd10=1411572643367&an=Google%20Plugin%20for%20Eclipse&tid=UA-43239122-1
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2014-11-12 16:20:37.488
+!MESSAGE Analytics ping response: 200: OK
+GIF89a  €ÿ ÿÿÿ   ,       D ;
