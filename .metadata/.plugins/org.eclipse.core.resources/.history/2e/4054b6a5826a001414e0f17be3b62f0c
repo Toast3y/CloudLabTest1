@@ -17,46 +17,16 @@ public class CloudLabTest1Servlet extends HttpServlet {
 		D = req.getParameter("D");
 		
 		
-		if ((A == null) || (B == null) || (C == null) || (D == null)){
-			resp.getWriter().println("ERROR: Some values haven't been specified.");
+		if (){
+			
 		}
 		else{
 			
 			//convert all string values to floats
-			
-			try{
-				a = Float.parseFloat(A.trim());
-			}
-			catch(NumberFormatException e){
-				resp.getWriter().println("A is not a number! Initializing it to 0");
-				a = (float)0;
-			}
-			
-			try{
-				b = Float.parseFloat(B.trim());
-			}
-			catch(NumberFormatException e){
-				resp.getWriter().println("B is not a number! Initializing it to 0");
-				b = (float)0;
-			}
-			
-			
-			try{
-				c = Float.parseFloat(C.trim());
-			}
-			catch(NumberFormatException e){
-				resp.getWriter().println("C is not a number! Initializing it to 0");
-				c = (float)0;
-			}
-			
-			
-			try{
-				d = Float.parseFloat(D.trim());
-			}
-			catch(NumberFormatException e){
-				resp.getWriter().println("D is not a number! Initializing it to 0");
-				d = (float)0;
-			}
+			a = Float.parseFloat(A.trim());
+			b = Float.parseFloat(B.trim());
+			c = Float.parseFloat(C.trim());
+			d = Float.parseFloat(D.trim());
 			
 			//Calculate the answer
 			answer = ((a - b) * (c - d));

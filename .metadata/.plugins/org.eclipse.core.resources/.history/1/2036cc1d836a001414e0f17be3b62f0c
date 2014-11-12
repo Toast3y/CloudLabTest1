@@ -9,6 +9,7 @@ public class CloudLabTest1Servlet extends HttpServlet {
 		
 		String A, B, C, D;
 		Float a, b, c, d, answer;
+		Boolean valid;
 		
 		//Get all parameters specified in the url
 		A = req.getParameter("A");
@@ -21,6 +22,8 @@ public class CloudLabTest1Servlet extends HttpServlet {
 			resp.getWriter().println("ERROR: Some values haven't been specified.");
 		}
 		else{
+			
+			valid = true;
 			
 			//convert all string values to floats
 			

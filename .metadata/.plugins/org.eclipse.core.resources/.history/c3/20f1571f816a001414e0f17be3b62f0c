@@ -1,0 +1,32 @@
+package ie.dit.jerrarddunne.christopher;
+import java.io.IOException;
+import javax.servlet.http.*;
+
+@SuppressWarnings("serial")
+public class CloudLabTest1Servlet extends HttpServlet {
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		resp.setContentType("text/plain");
+		
+		String A, B, C, D;
+		Float a, b, c, d, answer;
+		
+		A = req.getParameter("A");
+		B = req.getParameter("B");
+		C = req.getParameter("C");
+		D = req.getParameter("D");
+		
+		a = Float.parseFloat(A.trim());
+		b = Float.parseFloat(B.trim());
+		c = Float.parseFloat(C.trim());
+		d = Float.parseFloat(D.trim());
+		
+		answer = ((a - b) * (c - d));
+		
+		resp.getWriter().println("A = " + A);
+		resp.getWriter().println("\nB = " + B);
+		resp.getWriter().println("\nC = " + C);
+		resp.getWriter().println("\nD = " + D);
+		
+		resp.getWriter().println("( "+A+" - "+B+" ) * ( "+C+" - "+D+") = "+answer+"");
+	}
+}

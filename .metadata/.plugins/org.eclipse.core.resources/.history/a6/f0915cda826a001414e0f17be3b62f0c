@@ -9,6 +9,7 @@ public class CloudLabTest1Servlet extends HttpServlet {
 		
 		String A, B, C, D;
 		Float a, b, c, d, answer;
+		Boolean valid;
 		
 		//Get all parameters specified in the url
 		A = req.getParameter("A");
@@ -22,22 +23,24 @@ public class CloudLabTest1Servlet extends HttpServlet {
 		}
 		else{
 			
+			valid = true;
+			
 			//convert all string values to floats
 			
 			try{
 				a = Float.parseFloat(A.trim());
 			}
 			catch(NumberFormatException e){
-				resp.getWriter().println("A is not a number! Initializing it to 0");
-				a = (float)0;
+				resp.getWriter().println("A is not a number!");
+				valid = false;
 			}
 			
 			try{
 				b = Float.parseFloat(B.trim());
 			}
 			catch(NumberFormatException e){
-				resp.getWriter().println("B is not a number! Initializing it to 0");
-				b = (float)0;
+				resp.getWriter().println("B is not a number!");
+				valid = false;
 			}
 			
 			
@@ -45,8 +48,8 @@ public class CloudLabTest1Servlet extends HttpServlet {
 				c = Float.parseFloat(C.trim());
 			}
 			catch(NumberFormatException e){
-				resp.getWriter().println("C is not a number! Initializing it to 0");
-				c = (float)0;
+				resp.getWriter().println("C is not a number!");
+				valid = false;
 			}
 			
 			
@@ -54,12 +57,14 @@ public class CloudLabTest1Servlet extends HttpServlet {
 				d = Float.parseFloat(D.trim());
 			}
 			catch(NumberFormatException e){
-				resp.getWriter().println("D is not a number! Initializing it to 0");
-				d = (float)0;
+				resp.getWriter().println("D is not a number!");
+				valid = false;
 			}
 			
 			//Calculate the answer
-			answer = ((a - b) * (c - d));
+			if(valid == true){
+				answer = ((a - b) * (c - d));
+			}
 			
 			//Display all values shown and the calculation
 			resp.getWriter().println("A = " + A);

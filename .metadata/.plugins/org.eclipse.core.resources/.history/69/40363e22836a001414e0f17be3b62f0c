@@ -22,6 +22,8 @@ public class CloudLabTest1Servlet extends HttpServlet {
 		}
 		else{
 			
+			valid = true;
+			
 			//convert all string values to floats
 			
 			try{
